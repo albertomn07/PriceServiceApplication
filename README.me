@@ -1,0 +1,51 @@
+# Price Service API
+
+## Descripción
+Este servicio proporciona un endpoint REST para consultar los precios de los productos basados en una fecha de aplicación, el identificador del producto y el identificador de la cadena.
+
+## Librerías
+- Spring Boot: Framework para facilitar la configuración y ejecución.
+- Spring Web: Para construir servicios web RESTful.
+- Spring Data JPA: Para la persistencia de datos y acceso a base de datos.
+- H2 Database: Base de datos en memoria para pruebas y desarrollo.
+- JUnit: Para pruebas unitarias.
+- Mockito: Para mocking en pruebas.
+- Lombok: Para reducir el código repetitivo como getters, setters, etc.
+
+## Cómo Ejecutar la Aplicación
+
+### Pre-requisitos
+- Java 17 o superior
+- Maven (para construir el proyecto)
+
+### Instrucciones
+### Desde el IDE
+
+1. Importa el proyecto como un proyecto Maven en tu IDE favorito (Eclipse, IntelliJ IDEA, etc.).
+2. Ejecuta la clase principal `PriceServiceApplication`.
+
+La aplicación debería estar ahora corriendo y accesible en http://localhost:8080.
+
+## Cómo Probar la Aplicación
+
+### Endpoints
+- 'GET /api/prices/price': Obtiene el precio aplicable basado en los parámetros proporcionados.
+- Parámetros de consulta:
+ - startDate: La fecha y hora de inicio (formato ISO_LOCAL_DATE_TIME, ej. '2020-06-14T00:00:00').
+ - productId: El identificador del producto.
+ - brandId: El identificador de la cadena.
+
+### Uso de Postman
+Para probar la API con Postman, sigue estos pasos:
+1. Abre Postman y crea una nueva solicitud GET.
+2. Introduce la URL del endpoint (http://localhost:8080/api/prices/price).
+3. Añade los parámetros de consulta necesarios.
+4. Envía la solicitud y revisa la respuesta.
+
+#Tests
+Este proyecto incluye tests unitarios y de integración que puedes ejecutar para validar la lógica de la aplicación y asegurarte de que los endpoints funcionan como se espera.
+
+#Ejecución
+### Desde el IDE
+1. Importa el proyecto como un proyecto Maven en tu IDE favorito (Eclipse, IntelliJ IDEA, etc.).
+2. Ejecuta el test deseado.
